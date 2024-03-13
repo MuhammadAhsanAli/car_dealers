@@ -1,0 +1,52 @@
+<?php
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\CarImage;
+
+class CarImageSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $images = [
+            [
+                'car_id' => 1,
+                'image_path' => 'https://cdn.inventoryrsc.com/311984279_65b4728e40d11b65eafc64e4.jpg,https://cdn.inventoryrsc.com/311984279_65b4728f40d11b65eafc64e5.jpg,https://cdn.inventoryrsc.com/311984279_65b4728f40d11b65eafc64e6.jpg,https://cdn.inventoryrsc.com/311984279_65b4729040d11b65eafc64e7.jpg,https://cdn.inventoryrsc.com/311984279_65b4729040d11b65eafc64e8.jpg,https://cdn.inventoryrsc.com/311984279_65b4729040d11b65eafc64e9.jpg,https://cdn.inventoryrsc.com/311984279_65b4729140d11b65eafc64ea.jpg,https://cdn.inventoryrsc.com/311984279_65b4729140d11b65eafc64eb.jpg,https://cdn.inventoryrsc.com/311984279_65b4729140d11b65eafc64ec.jpg,https://cdn.inventoryrsc.com/311984279_65b4729240d11b65eafc64ed.jpg,https://cdn.inventoryrsc.com/311984279_65b4729240d11b65eafc64ee.jpg,https://cdn.inventoryrsc.com/311984279_65b4729340d11b65eafc64ef.jpg,https://cdn.inventoryrsc.com/311984279_65b4729340d11b65eafc64f0.jpg,https://cdn.inventoryrsc.com/311984279_65b4729340d11b65eafc64f1.jpg,https://cdn.inventoryrsc.com/311984279_65b4729440d11b65eafc64f2.jpg,https://cdn.inventoryrsc.com/311984279_65b4729440d11b65eafc64f3.jpg,https://cdn.inventoryrsc.com/311984279_65b4729540d11b65eafc64f4.jpg,https://cdn.inventoryrsc.com/311984279_65b4729540d11b65eafc64f5.jpg,https://cdn.inventoryrsc.com/311984279_65b4729540d11b65eafc64f6.jpg,https://cdn.inventoryrsc.com/311984279_65b4729640d11b65eafc64f7.jpg,https://cdn.inventoryrsc.com/311984279_65b4729640d11b65eafc64f8.jpg,https://cdn.inventoryrsc.com/311984279_65b4729640d11b65eafc64f9.jpg,https://cdn.inventoryrsc.com/311984279_65b4729740d11b65eafc64fa.jpg,https://cdn.inventoryrsc.com/311984279_65b4729740d11b65eafc64fb.jpg,https://cdn.inventoryrsc.com/311984279_65b4729740d11b65eafc64fc.jpg,https://cdn.inventoryrsc.com/311984279_65b4729840d11b65eafc64fd.jpg,https://cdn.inventoryrsc.com/311984279_65b4729840d11b65eafc64fe.jpg,https://cdn.inventoryrsc.com/311984279_65b4729940d11b65eafc64ff.jpg,https://cdn.inventoryrsc.com/311984279_65b4729940d11b65eafc6500.jpg',
+            ],
+            [
+                'car_id' => 2,
+                'image_path' => 'https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b89306.jpg,https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b89307.jpg,https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b89308.jpg,https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b89309.jpg,https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b8930a.jpg,https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b8930b.jpg,https://cdn.inventoryrsc.com/318219874_65e0594657888341f7b8930c.jpg,https://cdn.inventoryrsc.com/318219874_65e0594757888341f7b8930d.jpg,https://cdn.inventoryrsc.com/318219874_65e0594757888341f7b8930e.jpg,https://cdn.inventoryrsc.com/318219874_65e0594757888341f7b8930f.jpg,https://cdn.inventoryrsc.com/318219874_65e0594757888341f7b89310.jpg,https://cdn.inventoryrsc.com/318219874_65e0594857888341f7b89311.jpg,https://cdn.inventoryrsc.com/318219874_65e0594857888341f7b89312.jpg,https://cdn.inventoryrsc.com/318219874_65e0594857888341f7b89313.jpg,https://cdn.inventoryrsc.com/318219874_65e0594957888341f7b89314.jpg,https://cdn.inventoryrsc.com/318219874_65e0594957888341f7b89315.jpg,https://cdn.inventoryrsc.com/318219874_65e0594957888341f7b89316.jpg,https://cdn.inventoryrsc.com/318219874_65e0594957888341f7b89317.jpg,https://cdn.inventoryrsc.com/318219874_65e0594a57888341f7b89318.jpg,https://cdn.inventoryrsc.com/318219874_65e0594a57888341f7b89319.jpg,https://cdn.inventoryrsc.com/318219874_65e0594a57888341f7b8931a.jpg,https://cdn.inventoryrsc.com/318219874_65e0594a57888341f7b8931b.jpg,https://cdn.inventoryrsc.com/318219874_65e0594a57888341f7b8931c.jpg,https://cdn.inventoryrsc.com/318219874_65e0594b57888341f7b8931d.jpg,https://cdn.inventoryrsc.com/318219874_65e0594b57888341f7b8931e.jpg,https://cdn.inventoryrsc.com/318219874_65e0594b57888341f7b8931f.jpg,https://cdn.inventoryrsc.com/318219874_65e0594b57888341f7b89320.jpg,https://cdn.inventoryrsc.com/318219874_65e0594b57888341f7b89321.jpg',
+            ],
+            [
+                'car_id' => 3,
+                'image_path' => 'https://cdn.inventoryrsc.com/311984168_65b4712e40d11b65eafc5ef5.jpg,https://cdn.inventoryrsc.com/311984168_65b4712f40d11b65eafc5ef6.jpg,https://cdn.inventoryrsc.com/311984168_65b4712f40d11b65eafc5ef7.jpg,https://cdn.inventoryrsc.com/311984168_65b4713040d11b65eafc5ef8.jpg,https://cdn.inventoryrsc.com/311984168_65b4713140d11b65eafc5ef9.jpg,https://cdn.inventoryrsc.com/311984168_65b4713240d11b65eafc5efa.jpg,https://cdn.inventoryrsc.com/311984168_65b4713340d11b65eafc5efb.jpg,https://cdn.inventoryrsc.com/311984168_65b4713440d11b65eafc5efc.jpg,https://cdn.inventoryrsc.com/311984168_65b4713540d11b65eafc5efd.jpg,https://cdn.inventoryrsc.com/311984168_65b4713640d11b65eafc5efe.jpg,https://cdn.inventoryrsc.com/311984168_65b4713640d11b65eafc5eff.jpg,https://cdn.inventoryrsc.com/311984168_65b4713740d11b65eafc5f00.jpg,https://cdn.inventoryrsc.com/311984168_65b4713840d11b65eafc5f01.jpg,https://cdn.inventoryrsc.com/311984168_65b4713840d11b65eafc5f02.jpg,https://cdn.inventoryrsc.com/311984168_65b4713940d11b65eafc5f03.jpg,https://cdn.inventoryrsc.com/311984168_65b4713a40d11b65eafc5f04.jpg,https://cdn.inventoryrsc.com/311984168_65b4713b40d11b65eafc5f05.jpg,https://cdn.inventoryrsc.com/311984168_65b4713c40d11b65eafc5f06.jpg,https://cdn.inventoryrsc.com/311984168_65b4713d40d11b65eafc5f07.jpg,https://cdn.inventoryrsc.com/311984168_65b4713e40d11b65eafc5f08.jpg,https://cdn.inventoryrsc.com/311984168_65b4713f40d11b65eafc5f09.jpg,https://cdn.inventoryrsc.com/311984168_65b4714040d11b65eafc5f0a.jpg,https://cdn.inventoryrsc.com/311984168_65b4714140d11b65eafc5f0b.jpg,https://cdn.inventoryrsc.com/311984168_65b4714140d11b65eafc5f0c.jpg,https://cdn.inventoryrsc.com/311984168_65b4714240d11b65eafc5f0d.jpg,https://cdn.inventoryrsc.com/311984168_65b4714340d11b65eafc5f0e.jpg,https://cdn.inventoryrsc.com/311984168_65b4714440d11b65eafc5f0f.jpg',
+            ],
+            [
+                'car_id' => 4,
+                'image_path' => 'https://cdn.inventoryrsc.com/317155320_65d72841d8887934a97dea7b.jpg,https://cdn.inventoryrsc.com/317155320_65d72841d8887934a97dea7c.jpg,https://cdn.inventoryrsc.com/317155320_65d72841d8887934a97dea7d.jpg,https://cdn.inventoryrsc.com/317155320_65d72841d8887934a97dea7e.jpg,https://cdn.inventoryrsc.com/317155320_65d72842d8887934a97dea7f.jpg,https://cdn.inventoryrsc.com/317155320_65d72842d8887934a97dea80.jpg,https://cdn.inventoryrsc.com/317155320_65d72842d8887934a97dea81.jpg,https://cdn.inventoryrsc.com/317155320_65d72843d8887934a97dea82.jpg,https://cdn.inventoryrsc.com/317155320_65d72843d8887934a97dea83.jpg,https://cdn.inventoryrsc.com/317155320_65d72843d8887934a97dea84.jpg,https://cdn.inventoryrsc.com/317155320_65d72843d8887934a97dea85.jpg,https://cdn.inventoryrsc.com/317155320_65d72844d8887934a97dea86.jpg,https://cdn.inventoryrsc.com/317155320_65d72844d8887934a97dea87.jpg,https://cdn.inventoryrsc.com/317155320_65d72844d8887934a97dea88.jpg,https://cdn.inventoryrsc.com/317155320_65d72844d8887934a97dea89.jpg,https://cdn.inventoryrsc.com/317155320_65d72845d8887934a97dea8a.jpg,https://cdn.inventoryrsc.com/317155320_65d72845d8887934a97dea8b.jpg,https://cdn.inventoryrsc.com/317155320_65d72845d8887934a97dea8c.jpg,https://cdn.inventoryrsc.com/317155320_65d72846d8887934a97dea8d.jpg,https://cdn.inventoryrsc.com/317155320_65d72846d8887934a97dea8e.jpg,https://cdn.inventoryrsc.com/317155320_65d72846d8887934a97dea8f.jpg,https://cdn.inventoryrsc.com/317155320_65d72846d8887934a97dea90.jpg,https://cdn.inventoryrsc.com/317155320_65d72847d8887934a97dea91.jpg,https://cdn.inventoryrsc.com/317155320_65d72847d8887934a97dea92.jpg,https://cdn.inventoryrsc.com/317155320_65d72847d8887934a97dea93.jpg,https://cdn.inventoryrsc.com/317155320_65d72847d8887934a97dea94.jpg,https://cdn.inventoryrsc.com/317155320_65d72848d8887934a97dea95.jpg,https://cdn.inventoryrsc.com/317155320_65d72848d8887934a97dea96.jpg',
+            ],
+            [
+                'car_id' => 5,
+                'image_path' => 'https://cdn.inventoryrsc.com/311984489_65b473ed40d11b65eafc6e1b.jpg,https://cdn.inventoryrsc.com/311984489_65b473ed40d11b65eafc6e1c.jpg,https://cdn.inventoryrsc.com/311984489_65b473ed40d11b65eafc6e1d.jpg,https://cdn.inventoryrsc.com/311984489_65b473ee40d11b65eafc6e1e.jpg,https://cdn.inventoryrsc.com/311984489_65b473ee40d11b65eafc6e1f.jpg,https://cdn.inventoryrsc.com/311984489_65b473ee40d11b65eafc6e20.jpg,https://cdn.inventoryrsc.com/311984489_65b473ee40d11b65eafc6e21.jpg,https://cdn.inventoryrsc.com/311984489_65b473ef40d11b65eafc6e22.jpg,https://cdn.inventoryrsc.com/311984489_65b473ef40d11b65eafc6e23.jpg,https://cdn.inventoryrsc.com/311984489_65b473ef40d11b65eafc6e24.jpg,https://cdn.inventoryrsc.com/311984489_65b473f040d11b65eafc6e25.jpg,https://cdn.inventoryrsc.com/311984489_65b473f040d11b65eafc6e26.jpg,https://cdn.inventoryrsc.com/311984489_65b473f040d11b65eafc6e27.jpg,https://cdn.inventoryrsc.com/311984489_65b473f140d11b65eafc6e28.jpg,https://cdn.inventoryrsc.com/311984489_65b473f140d11b65eafc6e29.jpg,https://cdn.inventoryrsc.com/311984489_65b473f140d11b65eafc6e2a.jpg,https://cdn.inventoryrsc.com/311984489_65b473f240d11b65eafc6e2b.jpg,https://cdn.inventoryrsc.com/311984489_65b473f240d11b65eafc6e2c.jpg,https://cdn.inventoryrsc.com/311984489_65b473f240d11b65eafc6e2d.jpg,https://cdn.inventoryrsc.com/311984489_65b473f240d11b65eafc6e2e.jpg,https://cdn.inventoryrsc.com/311984489_65b473f340d11b65eafc6e2f.jpg,https://cdn.inventoryrsc.com/311984489_65b473f340d11b65eafc6e30.jpg,https://cdn.inventoryrsc.com/311984489_65b473f340d11b65eafc6e31.jpg',
+            ],
+        ];
+
+        foreach ($images as $image) {
+            $imagePaths = explode(',', $image['image_path']);
+            foreach ($imagePaths as $path) {
+                $imageName = basename($path);
+                file_put_contents(storage_path('app/public/car_images/' . $imageName), file_get_contents($path));
+
+                CarImage::create([
+                    'car_id' => $image['car_id'],
+                    'image_path' => 'car_images/' . $imageName,
+                ]);
+            }
+        }
+    }
+}
