@@ -1,66 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Car Dealers (Backend API)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The project is a Laravel-based web application that serves as a backend for managing a car dealership system. It includes features for managing cars, their images, body types, and makes. Additionally, it provides user authentication functionalities for login, logout, and token validation. The application follows RESTful API conventions and includes CRUD operations for managing cars and car images. It also provides endpoints for retrieving dropdown options for cars and body types.
 
-## About Laravel
+## Getting Started
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP >= 8.1
+- Composer
+- MySQL
 
-## Learning Laravel
+### Installing
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone the repository:
+ ```
+https://github.com/MuhammadAhsanAli/car_dealers.git
+ ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Install PHP dependencies:
+ ```
+composer update
+ ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Create a copy of the `.env.example` file and name it `.env`. Set up your database credentials and database name in the `.env` file.
 
-## Laravel Sponsors
+4. Set the image folder name in the `.env` file:
+ ```
+CAR_IMAGE=your_image_folder_name
+ ```
+ 
+5. Create a folder under `storage/app/public/` for storing uploaded images.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+6. Set read and write permissions for the storage folder:
+ ```
+sudo chmod -R 777 storage
+ ```
 
-### Premium Partners
+7. Generate an application key:
+ ```
+php artisan key:generate
+ ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+8. Run database migrations:
+ ```
+php artisan migrate
+ ```
 
-## Contributing
+9. Uncomment all seeder names in the `database/seeders/DatabaseSeeder.php` file.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+10. Seed the database:
 
-## Code of Conduct
+ ```
+ php artisan db:seed
+ ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Usage
+-----
 
-## Security Vulnerabilities
+### Managing Cars:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. **Viewing Cars:**
+   - Send a GET request to `/api/cars` to retrieve a list of all cars.
+   - Optionally, include a `body_id` parameter to filter cars by body type.
 
-## License
+2. **Viewing Car Details:**
+   - Send a GET request to `/api/cars/{id}` to retrieve details of a specific car by its ID.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. **Adding a New Car:**
+   - Send a POST request to `/api/cars` with the required car details in the request body.
+
+4. **Updating a Car:**
+   - Send a PUT request to `/api/cars/{id}` with the updated car details in the request body.
+
+5. **Deleting a Car:**
+   - Send a DELETE request to `/api/cars/{id}` to delete a specific car by its ID.
+
+### Managing Car Images:
+
+1. **Uploading Images:**
+   - Send a POST request to `/api/images/store` with the image file(s) attached.
+
+2. **Deleting an Image:**
+   - Send a DELETE request to `/api/images/{name}` to delete a specific image by its name.
+
+### Managing Body Types:
+
+1. **Viewing Body Types:**
+   - Send a GET request to `/api/bodies` to retrieve a list of all body types.
+
+### Authentication:
+
+1. **Logging In:**
+   - Send a POST request to `/api/login` with valid credentials (email and password) to obtain an access token.
+
+2. **Validating Token:**
+   - Send a POST request to `/api/is_login` with a valid access token to verify its authenticity.
+
+3. **Logging Out:**
+   - Send a POST request to `/api/logout` with a valid access token to revoke it and log out the user.
+
+Note:
+- Make sure to include the required headers and parameters.
+- Ensure proper authentication and authorization for accessing protected endpoints.
+- Handle responses and errors accordingly based on the API's status codes and response structures.
+
+
+
